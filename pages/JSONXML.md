@@ -26,13 +26,13 @@ Imagine I have written a comment in a blog. This is what is happening behind the
 |:--------|:-------|:--------|:---------|:-------|
 | comment | Top level  | comment data object   | Required |
 |======
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; userId  | The ID of the user making the comment  | string   | Required |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userId  | The ID of the user making the comment  | string   | Required |
 |=====
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; discussionId   | The ID of the discussion that is being commented on   | number | Required |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;discussionId   | The ID of the discussion that is being commented on   | number | Required |
 |=======
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; time | The time the comment was posted | string | Optional | Time is GMT. Format is YYYY-MM-DD HH:MM:SS Default is the time the comment is received by the server. |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time | The time the comment was posted | string | Optional | Time is GMT. Format is YYYY-MM-DD HH:MM:SS Default is the time the comment is received by the server. |
 |=======
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text | The text of the comment | string | Required |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text | The text of the comment | string | Required |
 |=======
 {: rules="groups"}
 

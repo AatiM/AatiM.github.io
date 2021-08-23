@@ -5,7 +5,7 @@ permalink: /Swagger/
 
 # Swagger Project
 
-
+The only reason that I have selected this project to be here is that as a technical writer, I am supposed to know how to work with different tools and applications. Therefore, the sample mentioned here is one of the examples to represent my knowledge of Swagger Editor and also SwaggerHub.
 
 ```yaml
 openapi: "3.0.2"

@@ -24,7 +24,7 @@ Note: Some of the examples also require matplotlib>=2.0.0.
 ### Installation Steps
 -------------------------------------------------
 1. Check the pyCOMPSs version to install.
-  * Our latest library () requires pyCOMPSs 2.7 or greater (check [here]() for information about other releases.)
+  * Our latest library requires pyCOMPSs 2.7 or greater (check [here]() for information about other releases.)
 2. Install pyCOMPSs following these [instructions]().
 3. Install our latest library version with `pip3 install library`
   * package requires the 'pycompss' Python module.
@@ -39,34 +39,45 @@ Note: Some of the examples also require matplotlib>=2.0.0.
 -------------------------------------------------------
 ### 1. Installing Docker and Docker-py
 ---------------------------------------------------
-1. Follow these instructions:
+1.Follow these instructions:
   * [Docker for Mac]()
   * [Docker for Ubuntu]()
   * [Docker for Arch Linux]()
-2. Add user to docker group to run our library as a non-root user.
+
+2.Add user to docker group to run our library as a non-root user.
   * [Instruction]()
-3. Check that Docker is correctly installed
+
+3.Check that Docker is correctly installed
 
 ```
 docker --version
 docker ps # this should be empty as no docker processes are running yet
 ```
-4. Install [docker-py]()
+
+4.Install [docker-py]()
 
 `pip3 install library`
+
 
 ### 2. Installing our Library
 --------------------------------------------------------
 `pip3 install library`
 
+This should add our library executable to your path.
+
+
 ### 3. Starting our Library in your Development Directory
 ----------------------------------------------------------
-Initialize our library where your source code are and this will allow Docker to access your local code and run in inside the container.
+Initialize our library where your source code will be. Then this will allow Docker to access your local code and run it inside the container.
 
-* Note: Without a path it operates on the current working directory.
+```
+# Without a path it operates on the current working directory.
 our library init
 
-* Note: You can also provide a path our library init/home/user/replace/path/
+# You can also provide a path
+our library init/home/user/replace/path/
+```  
+
 
 ### 4. Running Applications
 ---------------------------------------------------------

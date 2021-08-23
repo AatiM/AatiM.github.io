@@ -7,9 +7,9 @@ permalink: /Glossary/
 
 This page lists alphabetically the meaning of various terms used in our library documentation:
 
-#### Array-like <br>
+#### Array-like
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An instance of an object that can be interpreted as an array (e.g., a list, sparse, matrix, a NumPy array, etc)
-#### Block <br>
+#### Block 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A part of a ds-array that is normally stored remotely.
 #### Column
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A column in a ds-array.

@@ -6,9 +6,9 @@ permalink: /User-guide/
 # User Guide
 This user guide covers the basics of using our library and also the details on the different algorithms included in the library. Our library provides two major programming interfaces:
 
-1.An API to manage data in a distributed way which is built around the concept of distributed arrays (ds-arrays).
+1. An API to manage data in a distributed way which is built around the concept of distributed arrays (ds-arrays).
 
-2.An estimator-based interface to work with different machine learning models which is inspired by [scikit-learn]().
+2. An estimator-based interface to work with different machine learning models which is inspired by [scikit-learn](https://scikit-learn.org/stable/).
 
 The term estimator-based interface means that all the machine learning models in our library are as estimator objects. Our library estimators implement the same API as scikit-learn, which is mainly based on the *fit* and *predict* operators.
 The typical workflow in our library consists of the following steps:
@@ -40,18 +40,18 @@ Although the code above looks completely sequential, all our library algorithms 
 ### How to Run our Library
 ----------------------------------------------------------
 There are some features regarding our library:
-1. It can be used installed and used as a regular Python library but our library makes use of PyCOMPSs directives internally to parallelize all the computation.
+1. It can be installed and used as a regular Python library but our library makes use of PyCOMPSs directives internally to parallelize all the computation.
 2. Applications using our library need to be executed with PyCOMPSs. This can be done with the `runcompass` or `enqueue_compss` commands:
 
-`runcompss my_dislib_application.py`
+  `runcompss my_dislib_application.py`
 
-For more information on how to start running our library applications, refer to the [QuickStart guide](http://localhost:4000/ati-portfolio/QuickStart/)
+For more information on how to start running our library applications, refer to the <a href="{{site.baseurl}}/QuickStart/">QuickStart</a>
 
 ### Distributed Arrays
 --------------------------------------------------------
-Distributed arrays (ds-arrays)are the main data structure used in our library. A ds-array is a matrix divided in blocks which are stored remotely. Each block of a ds-array is a NumPy array. Our library provides an API similar to NumPy to work with ds-arrays in a completely sequential way.
+Distributed arrays (ds-arrays) are the main data structure used in our library. A ds-array is a matrix divided in blocks which are stored remotely. Each block of a ds-array is a NumPy array. Our library provides an API similar to NumPy to work with ds-arrays in a completely sequential way.
 
-![NumPy arrays](https://dislib.bsc.es/en/stable/_images/ds-array.png)
+<img src="{{site.baseurl}}/assets/img/ds-array.png">
 
 There are some factors to be considered here:
 1. All operations on ds-arrays are parallelized with PyCOMPSs.
@@ -69,16 +69,16 @@ Therefore, the block size affects the amount of data that can be loaded into mem
 Most estimators in our library process ds-arrays in blocks of rows. This indicates that the optimal block size when using these estimators might have as many horizontal blocks as available processors.
 The diagram below shows how the K-means estimator would process an 8x8 ds-array split in different block sizes.
 
-![Photo](https://dislib.bsc.es/en/stable/_images/ds-array-access.png)
+<img src="{{site.baseurl}}/assets/img/ds-array-access.png">
 * Using 4x4 blocks generates 2 tasks
 * Using 2x8 blocks generates 4 tasks
 
-Using 2x4 blocks provides the same parallelism as 2x8 blocks, but has the overhead of dealing with five additional blocks.
+Using 2x4 blocks provides the same parallelism as 2x8 blocks, but it has the overhead of dealing with five additional blocks.
 
 Another factor to take into consideration when choosing block size is task granularity. As it has been mentioned before, the number of tasks created by our library is proportional to the number of blocks. Also, block size is directly proportional to task duration or granularity. This is relevant as task scheduling in distributed environments requires communicating with a remote computer and transferring some data, which has a significant cost. Therefore, long tasks (big blocks) are normally more efficient than short tasks (small blocks).
 
 ##### Summary
-To summarize, there is a trade-off among amount of parallelism, scheduling overhead and memory usage which is highly depending on your platform. However, there are some main factors needed to be consider when choosing your block size:
+To summarize, there is a trade-off between the amount of parallelism, scheduling overhead and memory usage that highly depends on your platform. However, there are some main factors needed to be consider when choosing your block size:
  1. Ensure that a block of rows fits in the memory of a single processor.
  2. Define NxN blocks, where N is the number of processors you want to use.
  3. For small ds-arrays, it is better to use N< number of processors and increase granularity at the cost of reducing parallelism.
@@ -132,4 +132,4 @@ The `predict` method takes a single ds-array with the samples to be classified. 
 
 Comparison of classification methods:
 
-![https://dislib.bsc.es/en/stable/_images/classification.png](https://dislib.bsc.es/en/stable/_images/classification.png)
+<img src="{{site.baseurl}}/assets/img/classification.png">

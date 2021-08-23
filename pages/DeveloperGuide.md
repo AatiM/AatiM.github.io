@@ -46,10 +46,10 @@ Follow these steps when drafting a new release:
 1.Create and switch to a new branch named `release-x.y.`
 
 2.Update in different steps:
-* Update the release number accordingly in the [VERSION]() FILE.
+* Update the release number accordingly in the [VERSION]() file.
 * Update the required PyCOMPSs version in the [QuickStart Guide](http://localhost:4000/ati-portfolio/QuickStart/)
 * Update the [change log]()
-* Update the [performance plot]()in the documentation.
+* Update the [performance plot]() in the documentation.
 
 3.Push the release branch with the changes.
 
