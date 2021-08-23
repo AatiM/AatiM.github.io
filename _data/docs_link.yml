@@ -1,0 +1,18 @@
+- title: REST API Reference
+  url: "/docs/API_Reference/introduction"
+- title: JSON/XML
+  url: "/jsonxml/"
+- title: "User guide"
+  url: "/User-guide/"
+- title: "QuickStart"
+  url: "/QuickStart/"
+- title: "Developer’s guide"
+  url: "/DeveloperGuide/"
+- title: "Technical Editing"
+  url: "/TechnicalEditing/"
+- title: "Glossary"
+  url: "/Glossary/"
+- title: "Swagger"
+  url: "/Swagger/"
+- title: "About"
+  url: "/about/"
