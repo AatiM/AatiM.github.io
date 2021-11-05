@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ATI&apos;s Portfolio</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 05 Nov 2021 14:52:01 +0100</pubDate>
+    <lastBuildDate>Fri, 05 Nov 2021 14:52:01 +0100</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>On progress</title>
+        <description>
+</description>
+        <pubDate>Mon, 28 Jun 2021 20:52:21 +0200</pubDate>
+        <link>http://localhost:4000/2021/hello-world/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/hello-world/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>On progress</title>
+        <description>
+</description>
+        <pubDate>Mon, 28 Jun 2021 12:52:21 +0200</pubDate>
+        <link>http://localhost:4000/2021/welcome/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/welcome/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>
